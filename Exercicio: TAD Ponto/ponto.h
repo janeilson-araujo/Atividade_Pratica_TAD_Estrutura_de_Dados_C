@@ -2,7 +2,7 @@
 #define PONTO_H
 
 typedef struct Ponto Ponto;
-typedef Ponto* PPontos; 
+typedef Ponto *PPontos;
 
 PPontos alocarPonto(int quantidadePontos);
 

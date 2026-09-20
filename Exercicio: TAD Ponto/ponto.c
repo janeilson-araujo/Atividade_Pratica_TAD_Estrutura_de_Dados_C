@@ -21,11 +21,13 @@ void criarPontos(PPontos p, int i, float x, float y)
     p[i].y = y;
 }
 
-float exibirX(PPontos p, int i) {
+float exibirX(PPontos p, int i)
+{
     return p[i].x;
 }
 
-float exibirY(PPontos p, int i) {
+float exibirY(PPontos p, int i)
+{
     return p[i].y;
 }
 
