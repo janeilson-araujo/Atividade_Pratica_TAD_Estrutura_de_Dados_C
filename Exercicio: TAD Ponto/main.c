@@ -41,5 +41,7 @@ int main()
 
     printf("Distância: %.2f\n", calcularDistancia(p, pontoEscolhido1, pontoEscolhido2));
 
+    liberarPonto(p);
+
     return 0;
 }
