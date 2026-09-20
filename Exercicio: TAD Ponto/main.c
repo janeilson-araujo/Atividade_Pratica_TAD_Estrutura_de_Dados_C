@@ -21,8 +21,8 @@ int main()
 
     for (int i = 0; i < quantidadePontos; i++)
     {   
-        scanf("%f", &y);
         scanf("%f", &x);
+        scanf("%f", &y);
         criarPontos(p ,i , x, y);
     }
 
@@ -35,11 +35,11 @@ int main()
         printf("(%.2f, %.2f)\n", exibirX(p, i), exibirY(p, i));
     }
 
-    printf("pontos ecolhidos");
-    printf("ponto %d: (%.2f, %.2f)\n", pontoEscolhido1, exibirX(p, pontoEscolhido1), exibirY(p, pontoEscolhido1));
-    printf("ponto %d: (%.2f, %.2f)\n", pontoEscolhido2, exibirX(p, pontoEscolhido2), exibirY(p, pontoEscolhido2));
+    printf("pontos ecolhidos:\n");
+    printf("ponto %d: (%.2f, %.2f)\n", pontoEscolhido1, exibirX(p, pontoEscolhido1-1), exibirY(p, pontoEscolhido1-1));
+    printf("ponto %d: (%.2f, %.2f)\n", pontoEscolhido2, exibirX(p, pontoEscolhido2-1), exibirY(p, pontoEscolhido2-1));
 
-    printf("Distância: %.2f\n", calcularDistancia(p, pontoEscolhido1, pontoEscolhido2));
+    printf("Distância: %.2f\n", calcularDistancia(p, pontoEscolhido1 - 1, pontoEscolhido2 - 1));
 
     liberarPonto(p);
 

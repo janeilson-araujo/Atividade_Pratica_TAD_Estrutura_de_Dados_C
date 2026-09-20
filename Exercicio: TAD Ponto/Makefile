@@ -15,4 +15,7 @@ $(TARGET): $(OBJECTS)
 clean:
 	rm -f $(OBJECTS) $(TARGET)
 
-.PHONY: all clean
+.PHONY: all clean run
+
+run: $(TARGET)
+	./$(TARGET)
