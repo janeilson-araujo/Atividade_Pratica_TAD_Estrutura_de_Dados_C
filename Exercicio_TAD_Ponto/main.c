@@ -30,16 +30,16 @@ int main()
     printf("Pontos lidos:\n");
     for (int i = 0; i < quantidadePontos; i++)
     {
-        printf("(%.2f, %.2f)\n", exibirX(p, i), exibirY(p, i));
+        printf("i: (%.1f, %.1f)\n", i+1 , exibirX(p, i), exibirY(p, i));
     }
     printf("\n");
 
     printf("pontos ecolhidos:\n");
-    printf("ponto %d: (%.2f, %.2f)\n", pontoEscolhido1, exibirX(p, pontoEscolhido1 - 1), exibirY(p, pontoEscolhido1 - 1));
-    printf("ponto %d: (%.2f, %.2f)\n", pontoEscolhido2, exibirX(p, pontoEscolhido2 - 1), exibirY(p, pontoEscolhido2 - 1));
+    printf("ponto %d: (%.1f, %.1f)\n", pontoEscolhido1, exibirX(p, pontoEscolhido1 - 1), exibirY(p, pontoEscolhido1 - 1));
+    printf("ponto %d: (%.1f, %.1f)\n", pontoEscolhido2, exibirX(p, pontoEscolhido2 - 1), exibirY(p, pontoEscolhido2 - 1));
 
     printf("\n");
-    printf("Distância: %.2f\n", calcularDistancia(p, pontoEscolhido1 - 1, pontoEscolhido2 - 1));
+    printf("Distância: %.1f\n", calcularDistancia(p, pontoEscolhido1 - 1, pontoEscolhido2 - 1));
 
     liberarPonto(p);
 
