@@ -34,9 +34,9 @@ int main()
     }
     printf("\n");
 
-    printf("pontos escolhidos:\n");
-    printf("ponto %d: (%.1f, %.1f)\n", pontoEscolhido1, exibirX(p, pontoEscolhido1 - 1), exibirY(p, pontoEscolhido1 - 1));
-    printf("ponto %d: (%.1f, %.1f)\n", pontoEscolhido2, exibirX(p, pontoEscolhido2 - 1), exibirY(p, pontoEscolhido2 - 1));
+    printf("Pontos escolhidos:\n");
+    printf("Ponto %d: (%.1f, %.1f)\n", pontoEscolhido1, exibirX(p, pontoEscolhido1 - 1), exibirY(p, pontoEscolhido1 - 1));
+    printf("Ponto %d: (%.1f, %.1f)\n", pontoEscolhido2, exibirX(p, pontoEscolhido2 - 1), exibirY(p, pontoEscolhido2 - 1));
 
     printf("\n");
     printf("Distância: %.2f\n", calcularDistancia(p, pontoEscolhido1 - 1, pontoEscolhido2 - 1));
