@@ -34,7 +34,7 @@ int main()
     }
     printf("\n");
 
-    printf("pontos ecolhidos:\n");
+    printf("pontos escolhidos:\n");
     printf("ponto %d: (%.1f, %.1f)\n", pontoEscolhido1, exibirX(p, pontoEscolhido1 - 1), exibirY(p, pontoEscolhido1 - 1));
     printf("ponto %d: (%.1f, %.1f)\n", pontoEscolhido2, exibirX(p, pontoEscolhido2 - 1), exibirY(p, pontoEscolhido2 - 1));
 
