@@ -30,7 +30,7 @@ int main()
     printf("Pontos lidos:\n");
     for (int i = 0; i < quantidadePontos; i++)
     {
-        printf("i: (%.1f, %.1f)\n", i+1 , exibirX(p, i), exibirY(p, i));
+        printf("%d: (%.1f, %.1f)\n", i+1 , exibirX(p, i), exibirY(p, i));
     }
     printf("\n");
 
