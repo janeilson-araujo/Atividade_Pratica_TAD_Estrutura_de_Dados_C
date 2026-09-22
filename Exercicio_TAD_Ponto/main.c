@@ -39,7 +39,7 @@ int main()
     printf("ponto %d: (%.1f, %.1f)\n", pontoEscolhido2, exibirX(p, pontoEscolhido2 - 1), exibirY(p, pontoEscolhido2 - 1));
 
     printf("\n");
-    printf("Distância: %.1f\n", calcularDistancia(p, pontoEscolhido1 - 1, pontoEscolhido2 - 1));
+    printf("Distância: %.2f\n", calcularDistancia(p, pontoEscolhido1 - 1, pontoEscolhido2 - 1));
 
     liberarPonto(p);
 
