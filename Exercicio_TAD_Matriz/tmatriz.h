@@ -1,7 +1,7 @@
 #ifndef __TMATRIZ_H__
 #define __TMATRIZ_H__
 
-typedef struct Tmatriz tmatriz;
+typedef struct tmatriz tmatriz;
 typedef tmatriz *Ptmatriz;
 
 Ptmatriz lerMatriz(void);
