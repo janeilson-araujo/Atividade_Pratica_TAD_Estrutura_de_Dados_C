@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include "tmatriz.h"
 
-typedef struct
+typedef struct tmatriz
 {
     int dimensao;
     int **dados;
     int produto;
 } tmatriz, *Ptmatriz;
 
-Ptmatriz alocarMatriz(int n)
+static alocarMatriz(int n)
 {
     Ptmatriz matriz = (Ptmatriz)malloc(sizeof(tmatriz));
 
@@ -53,7 +52,7 @@ void imprimirMatrizOriginal(Ptmatriz matriz)
     {
         for (int j = 0; j < matriz->dimensao; j++)
         {
-            printf("%d", matriz->dados[i][j]);
+            printf("%d ", matriz->dados[i][j]);
         }
         printf("\n");
     }
@@ -61,12 +60,12 @@ void imprimirMatrizOriginal(Ptmatriz matriz)
 
 void imprimirMatrizTrasportada(Ptmatriz matriz)
 {
-    printf("Matriz Transposta::\n");
+    printf("Matriz Transposta:\n");
     for (int i = 0; i < matriz->dimensao; i++)
     {
         for (int j = 0; j < matriz->dimensao; j++)
         {
-            printf("%d", matriz->dados[j][i]);
+            printf("%d ", matriz->dados[j][i]);
         }
         printf("\n");
     }
@@ -74,34 +73,19 @@ void imprimirMatrizTrasportada(Ptmatriz matriz)
 
 void imprimirDiagonais(Ptmatriz matriz)
 {
-    int cont_diagonal = 0;
-
     printf("Diagonal Principal:");
     for (int i = 0; i < matriz->dimensao; i++)
     {
-        for (int j = 0; j < matriz->dimensao; j++)
-        {
-            if (j == cont_diagonal)
-            {
-                printf("%d", matriz->dados[i][j]);
-            }
-            cont_diagonal++;
-        }
+
+        printf("%d ", matriz->dados[i][i]);
     }
 
-    cont_diagonal = matriz->dimensao;
+    printf("\n");
 
     printf("Diagonal Secundária:");
     for (int i = 0; i < matriz->dimensao; i++)
     {
-        for (int j = 0; j < matriz->dimensao; j++)
-        {
-            if (j == cont_diagonal)
-            {
-                printf("%d", matriz->dados[i][j]);
-            }
-            cont_diagonal--;
-        }
+        printf("%d ", matriz->dados[i][matriz->dimensao - i - 1]);
     }
 }
 
@@ -112,8 +96,19 @@ void inprimirMatrizMulti(Ptmatriz matriz)
     {
         for (int j = 0; j < matriz->dimensao; j++)
         {
-            printf("%d", matriz->dados[i][j] * matriz->produto);
+            printf("%d ", matriz->dados[i][j] * matriz->produto);
         }
         printf("\n");
     }
+}
+
+void desalocarMatriz(Ptmatriz matriz)
+{
+    for (int i = 0; i < matriz->dimensao; i++)
+    {
+        free(matriz->dados[i]);
+    }
+    free(matriz->dados);
+
+    free(matriz);
 }
