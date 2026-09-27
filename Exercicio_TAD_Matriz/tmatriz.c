@@ -57,6 +57,7 @@ void imprimirMatrizOriginal(Ptmatriz matriz)
         }
         printf("\n");
     }
+    printf("\n");
 }
 
 void imprimirMatrizTrasportada(Ptmatriz matriz)
@@ -70,6 +71,7 @@ void imprimirMatrizTrasportada(Ptmatriz matriz)
         }
         printf("\n");
     }
+    printf("\n");
 }
 
 void imprimirDiagonais(Ptmatriz matriz)
@@ -89,6 +91,7 @@ void imprimirDiagonais(Ptmatriz matriz)
         printf("%d ", matriz->dados[i][matriz->dimensao - i - 1]);
     }
 
+    printf("\n");
     printf("\n");
 }
 
