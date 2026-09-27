@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "tmatriz.h"
 
 typedef struct tmatriz
@@ -9,7 +10,7 @@ typedef struct tmatriz
     int produto;
 } tmatriz, *Ptmatriz;
 
-static alocarMatriz(int n)
+static Ptmatriz alocarMatriz(int n)
 {
     Ptmatriz matriz = (Ptmatriz)malloc(sizeof(tmatriz));
 
