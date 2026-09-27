@@ -16,7 +16,7 @@ Ptmatriz alocarMatriz(int n)
 
     matriz->dimensao = n;
     matriz->produto = 0;
-    
+
     matriz->dados = (int **)malloc(matriz->dimensao * sizeof(int *));
     for (int i = 0; i < matriz->dimensao; i++)
     {
@@ -46,7 +46,28 @@ Ptmatriz lerMatriz(void)
     return matriz;
 }
 
-void matrizTrasportada(Ptmatriz matriz)
+void imprimirMatrizOriginal(Ptmatriz matriz)
 {
-    
+    printf("Matriz Original:\n");
+    for (int i = 0; i < matriz->dimensao; i++)
+    {
+        for (int j = 0; j < matriz->dimensao; j++)
+        {
+            printf("%d", matriz->dados[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void imprimirMatrizTrasportada(Ptmatriz matriz)
+{
+    printf("Matriz Transposta::\n");
+    for (int i = 0; i < matriz->dimensao; i++)
+    {
+        for (int j = 0; j < matriz->dimensao; j++)
+        {
+            printf("%d", matriz->dados[j][i]);
+        }
+        printf("\n");
+    }
 }
