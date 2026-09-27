@@ -30,7 +30,7 @@ Ptmatriz lerMatriz(void)
     int dimensao;
     int produto;
     scanf("%d", &dimensao);
-    Ptmatriz matriz = allocarMatriz(dimensao, produto);
+    Ptmatriz matriz = alocarMatriz(dimensao);
 
     for (int i = 0; i < matriz->dimensao; i++)
     {
