@@ -79,8 +79,7 @@ void imprimirDiagonais(Ptmatriz matriz)
     printf("Diagonal Principal:");
     for (int i = 0; i < matriz->dimensao; i++)
     {
-
-        printf("%d ", matriz->dados[i][i]);
+        printf(" %d", matriz->dados[i][i]);
     }
 
     printf("\n");
@@ -88,7 +87,7 @@ void imprimirDiagonais(Ptmatriz matriz)
     printf("Diagonal Secundária:");
     for (int i = 0; i < matriz->dimensao; i++)
     {
-        printf("%d ", matriz->dados[i][matriz->dimensao - i - 1]);
+        printf(" %d ", matriz->dados[i][matriz->dimensao - i - 1]);
     }
 
     printf("\n");
