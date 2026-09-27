@@ -71,3 +71,30 @@ void imprimirMatrizTrasportada(Ptmatriz matriz)
         printf("\n");
     }
 }
+
+void imprimirDiagonais(Ptmatriz matriz)
+{
+    int cont_diagonal = 0;
+
+    printf("Diagonal Principal:");
+    for (int i = 0; i < matriz->dimensao; i++){
+        for (int j = 0; j < matriz->dimensao; j++){
+            if(j == cont_diagonal){
+                printf("%d",matriz->dados[i][j]);
+            }
+            cont_diagonal++;
+        }
+    }
+
+    cont_diagonal = matriz->dimensao;
+
+    printf("Diagonal Secundária:");
+    for (int i = 0; i < matriz->dimensao; i++){
+        for (int j = 0; j < matriz->dimensao; j++){
+            if(j == cont_diagonal){
+                printf("%d",matriz->dados[i][j]);
+            }
+            cont_diagonal--;
+        }
+    }
+}
