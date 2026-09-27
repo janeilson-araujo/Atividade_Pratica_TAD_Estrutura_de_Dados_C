@@ -88,6 +88,8 @@ void imprimirDiagonais(Ptmatriz matriz)
     {
         printf("%d ", matriz->dados[i][matriz->dimensao - i - 1]);
     }
+
+    printf("\n");
 }
 
 void inprimirMatrizMulti(Ptmatriz matriz)
