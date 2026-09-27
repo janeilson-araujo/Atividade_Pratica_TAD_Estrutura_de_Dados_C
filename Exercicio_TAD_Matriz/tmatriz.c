@@ -77,10 +77,13 @@ void imprimirDiagonais(Ptmatriz matriz)
     int cont_diagonal = 0;
 
     printf("Diagonal Principal:");
-    for (int i = 0; i < matriz->dimensao; i++){
-        for (int j = 0; j < matriz->dimensao; j++){
-            if(j == cont_diagonal){
-                printf("%d",matriz->dados[i][j]);
+    for (int i = 0; i < matriz->dimensao; i++)
+    {
+        for (int j = 0; j < matriz->dimensao; j++)
+        {
+            if (j == cont_diagonal)
+            {
+                printf("%d", matriz->dados[i][j]);
             }
             cont_diagonal++;
         }
@@ -89,12 +92,28 @@ void imprimirDiagonais(Ptmatriz matriz)
     cont_diagonal = matriz->dimensao;
 
     printf("Diagonal Secundária:");
-    for (int i = 0; i < matriz->dimensao; i++){
-        for (int j = 0; j < matriz->dimensao; j++){
-            if(j == cont_diagonal){
-                printf("%d",matriz->dados[i][j]);
+    for (int i = 0; i < matriz->dimensao; i++)
+    {
+        for (int j = 0; j < matriz->dimensao; j++)
+        {
+            if (j == cont_diagonal)
+            {
+                printf("%d", matriz->dados[i][j]);
             }
             cont_diagonal--;
         }
+    }
+}
+
+void inprimirMatrizMulti(Ptmatriz matriz)
+{
+    printf("Matriz Multiplicada pelo Escalar (%d):\n", matriz->produto);
+    for (int i = 0; i < matriz->dimensao; i++)
+    {
+        for (int j = 0; j < matriz->dimensao; j++)
+        {
+            printf("%d", matriz->dados[i][j] * matriz->produto);
+        }
+        printf("\n");
     }
 }
